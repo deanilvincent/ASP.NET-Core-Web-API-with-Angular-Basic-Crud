@@ -1,0 +1,15 @@
+<div class="modal is-active" *ngIf="valuesForDeleteModal.isShowDeleteModal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Notification</p>
+      <button class="delete" aria-label="close" (click)="close()"></button>
+    </header>
+    <section class="modal-card-body">
+      Are you sure do you want to delete this customer?
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-danger" (click)="delete()">Delete permanently</button>
+      <button class="button" (click)="close()">Cancel</button>
+    </footer>
+  </div>
