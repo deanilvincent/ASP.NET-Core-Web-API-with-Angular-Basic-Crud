@@ -3771,19 +3771,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mark.deanil.vicente\\.nuget\\packages\\": {}
+    "C:\\Users\\adminaccess\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
+      "projectUniqueName": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
       "projectName": "webapi",
-      "projectPath": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
-      "packagesPath": "C:\\Users\\mark.deanil.vicente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\obj\\",
+      "projectPath": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
+      "packagesPath": "C:\\Users\\adminaccess\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mark.deanil.vicente\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\adminaccess\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

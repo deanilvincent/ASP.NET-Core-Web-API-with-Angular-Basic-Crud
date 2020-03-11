@@ -1,0 +1,27 @@
+<button class="button is-primary" [routerLink]="['/customers/create']">Create new</button>
+<br />
+<br />
+<table class="table is-fullwidth">
+  <thead>
+    <th>Customer ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{customer.customerId}}</td>
+      <td>{{customer.firstname}}</td>
+      <td>{{customer.lastname}}</td>
+      <td>
+        <button class="button is-warning" (click)="navToEditPage(customer.customerId)">Edit</button>
+        &nbsp;
+        <button class="button is-danger" (click)="openDeleteModal(customer.customerId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-delete-customer-modal [valuesForDeleteModal]="valuesForDeleteModal" (cancelDeleteModal)="cancelDeleteModal($event)"
+  (reloadTable)="reloadTable()">
+</app-delete-customer-modal>

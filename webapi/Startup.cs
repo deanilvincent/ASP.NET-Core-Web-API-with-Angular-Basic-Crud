@@ -30,12 +30,11 @@ namespace webapi
             services.AddControllers();
 
             // Register DB Context
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer();
-
+            // add db context here
             // register cors Policy
             services.AddCors(options => options.AddPolicy("CorsPolicy", policy =>
             {
-                policy.AllowCredentials().AllowAnyMethod().AllowAnyOrigin().WithOrigins("http://localhost:");
+                policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:4200");
             }));
         }
 
@@ -47,7 +46,7 @@ namespace webapi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

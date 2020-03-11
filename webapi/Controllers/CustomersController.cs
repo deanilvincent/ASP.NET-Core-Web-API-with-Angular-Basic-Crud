@@ -69,7 +69,7 @@ namespace webapi.Controllers
             {
                 var customer = await context.Customers.FindAsync(id);
 
-                context.Customers.Update(customer);
+                context.Customers.Remove(customer);
                 await context.SaveChangesAsync();
                 return Ok("Successfully deleted");
             }

@@ -1,0 +1,27 @@
+<h3 class="title is-3">Update</h3>
+<div class="columns">
+  <div class="column">
+    <div class="field">
+      <label class="label">Firstname</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="John" [(ngModel)]="customer.firstname" />
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="field">
+      <label class="label">Lastname</label>
+      <div class="control">
+        <input type="text" class="input" placeholder="Doe" [(ngModel)]="customer.lastname" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="level">
+  <div class="level-left"></div>
+  <div class="level-right">
+    <button class="button is-success" (click)="updateCustomer()">Update</button>
+    &nbsp;
+    <button class="button" [routerLink]="['/customers/list']">Go back to list</button>
+  </div>
+</div>
