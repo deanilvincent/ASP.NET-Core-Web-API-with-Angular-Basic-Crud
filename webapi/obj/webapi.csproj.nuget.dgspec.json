@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/vsonline/workspace/githubrepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj": {}
+    "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "/home/vsonline/workspace/githubrepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj": {
+    "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vsonline/workspace/githubrepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj",
+        "projectUniqueName": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
         "projectName": "webapi",
-        "projectPath": "/home/vsonline/workspace/githubrepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj",
-        "packagesPath": "/var/nuget",
-        "outputPath": "/home/vsonline/workspace/githubrepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/obj/",
+        "projectPath": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
+        "packagesPath": "C:\\Users\\mark.deanil.vicente\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mark.deanil.vicente\\Desktop\\repos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/vsonline/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mark.deanil.vicente\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -41,16 +41,14 @@
               "version": "[3.1.2, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.1.6, )"
+              "version": "[3.1.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
-              "target": "Package",
-              "version": "[1.1.6, )"
             }
           },
           "imports": [
@@ -71,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/dotnet/sdks/3.1.100/sdk/3.1.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -30,7 +30,13 @@ namespace webapi
             services.AddControllers();
 
             // Register DB Context
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(@"Server=tcp:mssqlserver0001.database.windows.net,1433;Initial Catalog=testdb;Persist Security Info=False;User ID=ssa;Password=Pr0xxxyASDF;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer();
+
+            // register cors Policy
+            services.AddCors(options => options.AddPolicy("CorsPolicy", policy =>
+            {
+                policy.AllowCredentials().AllowAnyMethod().AllowAnyOrigin().WithOrigins("http://localhost:");
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +52,8 @@ namespace webapi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
