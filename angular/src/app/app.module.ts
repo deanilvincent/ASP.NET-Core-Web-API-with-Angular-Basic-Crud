@@ -14,6 +14,10 @@ import { CustomerService } from 'src/services/customer.service';
 import { ListOfCustomerComponent } from './customer/list-of-customer/list-of-customer.component';
 import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
 import { DeleteCustomerModalComponent } from './customer/delete-customer-modal/delete-customer-modal.component';
+import { NgHttpLoaderModule } from 'ng-http-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
    declarations: [
@@ -29,6 +33,14 @@ import { DeleteCustomerModalComponent } from './customer/delete-customer-modal/d
       AppRoutingModule,
       HttpClientModule,
       RouterModule.forRoot(appRoutes),
+      NgHttpLoaderModule.forRoot(),
+
+      BrowserAnimationsModule,
+      ToastrModule.forRoot({
+         timeOut: 3000,
+         positionClass: 'toast-top-center',
+         preventDuplicates: true,
+      }),
       FormsModule
    ],
    providers: [

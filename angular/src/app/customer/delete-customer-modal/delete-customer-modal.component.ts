@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CustomerService } from 'src/services/customer.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-delete-customer-modal',
@@ -11,7 +12,7 @@ export class DeleteCustomerModalComponent implements OnInit {
   @Output() cancelDeleteModal = new EventEmitter()
   @Output() reloadTable = new EventEmitter()
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -21,11 +22,12 @@ export class DeleteCustomerModalComponent implements OnInit {
   }
 
   delete() {
-    this.customerService.deleteCustomerById(this.valuesForDeleteModal.id).subscribe(() => {
-      alert('Successfully deleted')
+    this.customerService.deleteCustomerById(this.valuesForDeleteModal.id).subscribe(response => {
+      this.toastr.success('Success!', response)
       this.cancelDeleteModal.emit(false)
       this.reloadTable.emit()
     }, error => {
+      this.toastr.error('Error!', error)
       console.log(error)
     })
   }
