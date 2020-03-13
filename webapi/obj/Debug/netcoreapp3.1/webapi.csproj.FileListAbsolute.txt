@@ -150,3 +150,5 @@ C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic
 C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\webapi\obj\Debug\netcoreapp3.1\staticwebassets\webapi.StaticWebAssets.xml
 C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\webapi\obj\Debug\netcoreapp3.1\webapi.dll
 C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\webapi\obj\Debug\netcoreapp3.1\webapi.pdb
+C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\webapi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\adminaccess\Desktop\githubrepos\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\webapi\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll

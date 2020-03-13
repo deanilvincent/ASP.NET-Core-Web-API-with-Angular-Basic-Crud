@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from 'src/services/customer.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-edit-customer',
@@ -11,7 +12,10 @@ export class EditCustomerComponent implements OnInit {
 
   customer: any = {}
 
-  constructor(private customerService: CustomerService, private route: ActivatedRoute) { }
+  constructor(private customerService: CustomerService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private toastr: ToastrService) { }
 
   customerId: number
 
@@ -29,9 +33,11 @@ export class EditCustomerComponent implements OnInit {
   }
 
   updateCustomer() {
-    this.customerService.updateCustomer(this.customer, this.customerId).subscribe(() => {
-      alert('Successfully updated')
+    this.customerService.updateCustomer(this.customer, this.customerId).subscribe(response => {
+      this.toastr.success('Success!', response)
+      this.router.navigate(['/customers/list'])
     }, error => {
+      this.toastr.error('Error!', error)
       console.log(error)
     })
   }

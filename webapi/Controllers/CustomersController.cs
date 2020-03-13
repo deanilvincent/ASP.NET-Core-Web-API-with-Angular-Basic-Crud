@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using webapi.Contracts;
 using webapi.Data;
 
 namespace webapi.Controllers
@@ -11,8 +12,10 @@ namespace webapi.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly AppDbContext context;
-        public CustomersController(AppDbContext context)
+        private readonly IMainHub mainHub;
+        public CustomersController(AppDbContext context, IMainHub mainHub)
         {
+            this.mainHub = mainHub;
             this.context = context;
         }
 
@@ -39,6 +42,7 @@ namespace webapi.Controllers
             {
                 context.Customers.Add(customer);
                 await context.SaveChangesAsync();
+                await mainHub.UpdateClients();
                 return Ok("Successfully created");
             }
             catch (Exception ex)
@@ -54,6 +58,7 @@ namespace webapi.Controllers
             {
                 context.Customers.Update(customer);
                 await context.SaveChangesAsync();
+                await mainHub.UpdateClients();
                 return Ok("Successfully updated");
             }
             catch (Exception ex)
@@ -71,6 +76,7 @@ namespace webapi.Controllers
 
                 context.Customers.Remove(customer);
                 await context.SaveChangesAsync();
+                await mainHub.UpdateClients();
                 return Ok("Successfully deleted");
             }
             catch (Exception ex)

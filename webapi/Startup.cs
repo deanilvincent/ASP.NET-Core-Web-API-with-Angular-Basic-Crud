@@ -11,7 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using webapi.Contracts;
 using webapi.Data;
+using webapi.Hubs;
 
 namespace webapi
 {
@@ -30,12 +32,18 @@ namespace webapi
             services.AddControllers();
 
             // Register DB Context
-            // add db context here
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(""));
+
             // register cors Policy
             services.AddCors(options => options.AddPolicy("CorsPolicy", policy =>
             {
                 policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:4200");
             }));
+
+            // services
+            services.AddTransient<IMainHub, MainHub>();
+
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +65,7 @@ namespace webapi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<MainHub>("/hub/main");
             });
         }
     }
