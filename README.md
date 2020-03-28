@@ -5,7 +5,7 @@ This sample ASP.NET Core Web API (v3.1) and Angular (v9) with Typescript project
 
 The [webapi](https://github.com/deanilvincent/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/tree/master/webapi) serves as the backend web api or the RESTful Service that handles different requests like `get`,`post`,`put` & `delete` methods. While the project [angular](https://github.com/deanilvincent/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/tree/master/angular) serves as the frontend that consumes the requests from our web api project. 
 
-Additionally, I added a `signalr` feature in this project. So, every time there's a new changes or update made by the server, it will automatically trigger the angular list of data and refresh it. To learn more about `SignalR` visit this [link]([https://dotnet.microsoft.com/apps/aspnet/signalr](https://dotnet.microsoft.com/apps/aspnet/signalr))
+Additionally, I added a `signalr` feature in this project. So, every time there's a new changes or update made by the server, it will automatically trigger the angular list of data and refresh it. To learn more about `SignalR` visit this [link](https://dotnet.microsoft.com/apps/aspnet/signalr)
 
 ## Setup
 After you download/clone this project, you need to restore the packages on each project.
