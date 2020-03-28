@@ -32,7 +32,7 @@ namespace webapi
             services.AddControllers();
 
             // Register DB Context
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(""));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(@"Server=tcp:testserver0002.database.windows.net,1433;Initial Catalog=testdb;Persist Security Info=False;User ID=ssa;Password=JejeM0nster;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
 
             // register cors Policy
             services.AddCors(options => options.AddPolicy("CorsPolicy", policy =>

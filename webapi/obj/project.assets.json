@@ -4616,19 +4616,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adminaccess\\.nuget\\packages\\": {}
+    "/Users/dv/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
+      "projectUniqueName": "/Users/dv/Documents/Development/GithubRepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj",
       "projectName": "webapi",
-      "projectPath": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\webapi.csproj",
-      "packagesPath": "C:\\Users\\adminaccess\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adminaccess\\Desktop\\githubrepos\\ASP.NET-Core-Web-API-with-Angular-Basic-Crud\\webapi\\obj\\",
+      "projectPath": "/Users/dv/Documents/Development/GithubRepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/webapi.csproj",
+      "packagesPath": "/Users/dv/.nuget/packages/",
+      "outputPath": "/Users/dv/Documents/Development/GithubRepos/ASP.NET-Core-Web-API-with-Angular-Basic-Crud/webapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adminaccess\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/dv/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -4687,7 +4687,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
       }
     }
   }
